@@ -1,17 +1,16 @@
-
-let handler = async(m, { conn, text, participants }) => {
-  let teks = `${text ? text : ' '}\n\n`
-		      	for (let mem of participants) {
-		            teks += `@${mem.id.split('@')[0]}\n`
-				}
-                conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )
+let handler = async (m, { conn, text, participants, isAdmin, isOwner }) => {
+    let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
+    m.reply(`${text ? `${text}\n` : ''}┌─「 Tag All 」\n` + users.map(v => '│◦❒ @' + v.replace(/@.+/, '')).join`\n` + '\n└────', null, {
+        mentions: users
+    })
 }
-handler.help = ['tagall <pesan>']
-handler.tags = ['group']
-handler.command = /^(tagall)$/i
 
-handler.group = true
+handler.help = ['tagall']
+handler.tags = ['group']
+handler.command = ['tagall']
 handler.admin = true
+handler.group = true
+
 
 module.exports = handler
 
