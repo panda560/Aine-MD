@@ -121,7 +121,7 @@ handler.help = ['igstory'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 handler.command = /^(igs(tory)?)$/i
 handler.limit = true
-handler.group = true
+handler.group = false
 
 module.exports = handler
 
