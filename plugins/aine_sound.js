@@ -11,6 +11,6 @@ handler.limit = true
 handler.mods = false 
 handler.premium = false
 handler.group = false 
-handler.private = false
+handler.private = true
 
 module.exports = handler
