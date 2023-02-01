@@ -6,7 +6,8 @@ global.owner = [
   ['6281273677810'], 
   ['6281959293465', 'PANGERAN MERMAID', true],
   ['6281273677810', 'FAIZ JB', true],
-  ['6285609467937', 'BOT', true]
+  ['6282181337337', 'BOT', true],
+  ['855389162590', 'Darren Farrelino Dirgantara', true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
